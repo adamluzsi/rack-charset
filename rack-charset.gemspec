@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Adam Luzsi"]
   spec.email         = ["adamluzsi@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A simple rack middleware that add charset to the response}
+  spec.description   = %q{A simple rack middleware that add charset to the response. Useful when the Browser cannot tell about your website that it use utf-8 or latin1 as charset for the html code}
+  spec.homepage      = "https://github.com/adamluzsi/rack-charset"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"

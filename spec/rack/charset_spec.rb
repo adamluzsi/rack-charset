@@ -42,5 +42,23 @@ describe Rack::Charset do
         end
       end
     end
+
+    context 'when content type header is missing' do
+
+        rack_app do
+          middlewares do |b|
+            b.use Rack::Charset, 'iso-8859-1'
+          end
+
+          get '/' do
+            'OK'
+          end
+        end
+
+        it 'should not attack the charset' do
+          expect(get(url: '/').headers['Content-Type']).to eq 'text/plain; charset=iso-8859-1'
+        end
+
+    end
   end
 end
