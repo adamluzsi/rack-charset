@@ -1,5 +1,5 @@
 require "rack/charset/version"
-require "rack/response"
+require "rack"
 module Rack
   class Charset
 
